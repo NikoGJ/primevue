@@ -7,6 +7,7 @@
         <div :class="['layout-mask', {'layout-mask-active': sidebarActive}]" @click="onMaskClick"></div>
         <div class="layout-content">
             <div class="layout-content-inner">
+				<Test />
                 <router-view/>
                 <app-footer />
             </div>
@@ -25,6 +26,7 @@ import AppMenu from '@/AppMenu.vue';
 import AppFooter from '@/AppFooter.vue';
 import AppConfigurator from '@/AppConfigurator.vue';
 import AppNews from '@/AppNews.vue';
+import Test from './views/Test.vue';
 
 export default {
     data() {
@@ -119,7 +121,8 @@ export default {
         'app-menu': AppMenu,
         'app-footer': AppFooter,
         'app-configurator': AppConfigurator,
-        'app-news': AppNews
+        'app-news': AppNews,
+		Test
     }
 }
 </script>
